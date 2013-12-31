@@ -1,0 +1,30 @@
+{
+  "name": "fluid",
+  "version": "0.0.0",
+  "description": "An opionated MVC web framework for Node.js",
+  "main": "lib/fluid.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:alyssais/fluid"
+  },
+  "keywords": [
+    "mvc",
+    "web",
+    "framework"
+  ],
+  "author": "Alyssa Ross <hi@alyssa.is> (@couldntmissher)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alyssais/fluid/issues"
+  },
+  "homepage": "https://github.com/alyssais/fluid",
+  "dependencies": {
+    "lodash": "~2.4.1"
+  }
+}

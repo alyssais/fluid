@@ -1,0 +1,30 @@
+{
+  "name": "fluid",
+  "version": "0.0.0",
+  "description": "An opionated MVC web framework for Node.js",
+  "main": "lib/fluid.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:penman/fluid"
+  },
+  "keywords": [
+    "mvc",
+    "web",
+    "framework"
+  ],
+  "author": "Ross Penman <ross@pen.mn> (@PenmanRoss)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/penman/fluid/issues"
+  },
+  "homepage": "https://github.com/penman/fluid",
+  "dependencies": {
+    "lodash": "~2.4.1"
+  }
+}

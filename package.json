@@ -27,6 +27,7 @@
   "dependencies": {
     "lodash": "~2.4.1",
     "chai": "~1.8.1",
-    "mocha": "~1.16.2"
+    "mocha": "~1.16.2",
+    "handlebars": "~1.2.1"
   }
 }

@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+
+GLOBAL.Fluid = require("../lib/fluid");
+GLOBAL.Flume = Fluid.Flume;
+GLOBAL.Fluent = Fluid.Fluent;
+
+require(require("fs").realpathSync(".") + "/config/application");

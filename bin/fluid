@@ -1,7 +1,28 @@
 #!/usr/bin/env node
 
-GLOBAL.Fluid = require("../lib/fluid");
-GLOBAL.Flume = Fluid.Flume;
-GLOBAL.Fluent = Fluid.Fluent;
+var program = require("commander");
+var fs = require("fs");
+require("colors");
+var package = require(fs.realpathSync(__dirname + "/../package.json"));
 
-require(require("fs").realpathSync(".") + "/config/application");
+var app = function() {
+	try {
+		return require(fs.realpathSync("./config/application"));
+	} catch (e) {
+		console.log("\n  Error: This is not a Fluid application.\n".red);
+		process.exit(0);
+	}
+};
+
+program
+	.version(package.version);
+
+program
+	.command('server [port]')
+	.description('run application on localhost')
+	.action(function(env) {
+		app();
+		Fluid.application.server();
+	});
+
+program.parse(process.argv);

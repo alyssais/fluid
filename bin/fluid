@@ -5,12 +5,22 @@ var fs = require("fs");
 require("colors");
 var package = require(fs.realpathSync(__dirname + "/../package.json"));
 
+GLOBAL.Fluid = require("../lib/fluid");
+GLOBAL.Flume = Fluid.Flume;
+GLOBAL.Fluent = Fluid.Fluent;
+
 var app = function() {
 	try {
-		return require(fs.realpathSync("./config/application"));
-	} catch (e) {
-		console.log("\n  Error: This is not a Fluid application.\n".red);
-		process.exit(0);
+		return require(fs.realpathSync("./config/application.js"));
+	} catch (error) {
+		console.log(error);
+
+		if (error.code === "MODULE_NOT_FOUND") {
+			console.log("\n  Error: This is not a Fluid application.\n".red);
+			process.exit(0);
+		}
+
+		throw error;
 	}
 };
 
@@ -20,9 +30,10 @@ program
 program
 	.command('server [port]')
 	.description('run application on localhost')
-	.action(function(env) {
+	.action(function(port) {
 		app();
-		Fluid.application.server();
+		Fluid.application.server(port);
+		console.log("Fluid is running at http://localhost:" + port + "/ - yay!");
 	});
 
 program.parse(process.argv);

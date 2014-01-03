@@ -31,7 +31,6 @@ program
 		app();
 		port || (port = 3000);
 		Fluid.application.server(port);
-		Fluid.application.logger.success("Fluid is running at http://localhost:" + port + "/ - yay!");
 	});
 
 program.parse(process.argv);

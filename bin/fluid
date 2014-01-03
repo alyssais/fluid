@@ -29,6 +29,7 @@ program
 	.description('run application on localhost')
 	.action(function(port) {
 		app();
+		port || (port = 3000);
 		Fluid.application.server(port);
 		Fluid.application.logger.success("Fluid is running at http://localhost:" + port + "/ - yay!");
 	});

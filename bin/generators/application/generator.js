@@ -1,5 +1,4 @@
 var fs = require("fs");
-var async = require("async");
 
 module.exports = function(name) {
 	fs.mkdir(name, function(error) {

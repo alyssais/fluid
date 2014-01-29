@@ -15,6 +15,7 @@ module.exports = function(name) {
 		fs.mkdir(name + "/app", function(error) {
 			fs.mkdir(name + "/app/controllers");
 			fs.mkdir(name + "/app/views");
+			fs.mkdir(name + "/app/public");
 		});
 	});
 }

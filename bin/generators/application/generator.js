@@ -10,6 +10,8 @@ module.exports = function(name) {
 			};
 
 			['config/application.js', 'config/routes.js'].forEach(copyTemplate);
+
+			fs.mkdir(name + "/config/initializers")
 		});
 
 		fs.mkdir(name + "/app", function(error) {

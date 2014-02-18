@@ -8,3 +8,4 @@ $ fluid generate application [app_name]
 $ cd [app_name]
 $ fluid server
 ```
+cheese is good

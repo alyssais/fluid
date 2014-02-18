@@ -1,5 +1,5 @@
 # Fluid
-An opinionated MVC web framework for Node.js
+A ***very new*** MVC web framework for Node.js
 
 ## Getting started
 

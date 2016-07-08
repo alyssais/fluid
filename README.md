@@ -1,4 +1,7 @@
 # Fluid
+
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+
 An opinionated MVC web framework for Node.js
 
 ## Getting started
